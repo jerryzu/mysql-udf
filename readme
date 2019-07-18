@@ -1,0 +1,16 @@
+…or create a new repository on the command line
+echo "# mysql-udf" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/jerryzu/mysql-udf.git
+git push -u origin master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/jerryzu/mysql-udf.git
+git push -u origin master
+
+
+close enforce
+create function myadd returns integer soname 'udf.so';
+create aggregate function mysum returns integer soname 'aggr.so'
